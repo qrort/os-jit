@@ -31,7 +31,7 @@ int main() {
     int64_t a, b, mod;
     cin >> a >> b >> mod;
     modify(mod);
-    auto ptr = mmap(nullptr, sizeof(disassembled), PROT_READ, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
+    auto ptr = mmap(nullptr, sizeof(disassembled), PROT_NONE, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
     if (ptr == MAP_FAILED) {
         print_error("Couldn't allocate memory");
     } else {
